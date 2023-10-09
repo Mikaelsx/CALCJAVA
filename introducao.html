@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introdução ao Java Script</h1>
+
+    <form action="" method="get">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Seu nome">
+        <br/><br/>
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu sobrenome">
+        <br/><br/>
+
+        <button onclick="alert('Boa Tarde :)')">Boa Tarde</button>
+        <button onclick="saudar()">Saudar</button>
+    </form>
+
+    <script>
+        function saudar(){
+            event.preventDefault(); // PARA O SUBIMIT DO FORMULÁRIO
+            // SEPARAR O NOME EM DUAS VARIAVEIS
+            let nome = document.getElementById("nome").value;
+            let sobrenome = window.document.getElementById("sobrenome").value;
+            // INTERPOLAR O VALOR DO NOME COMPLETO
+            alert(`Boa tarde ${nome} ${sobrenome}!`)
+
+
+
+
+            // INTERPOLAR O VALOR DO NOME COMPLETO
+            //console.log(nome.value);
+
+            // INTERPOLAÇÃO ANTES DE 2015
+            //alert("Boa Tarde" + "nome" + "!");
+
+            // INTERPOLAÇÃO DEPOIS DE 2015
+            //alert(`Boa Tarde ${nome} !`);
+        }
+    </script>
+
+</body>
+</html>
